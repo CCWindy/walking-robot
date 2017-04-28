@@ -147,32 +147,32 @@
                 var count = 0;
                 var init = 0;
                 walkingInterval = setInterval(function () {
-                    if (init < 5) {
-                        walking(10);
+                    if (init < 10) {
+                        walking(20);
                         init++;
                     } else {
                         walking(count);
                         count++;
-                        if (count == 20) {
+                        if (count == 40) {
                             count = 0;
                         }
                     }
-                }, 30);
+                }, 40);
             } else {
                 clearInterval(walkingInterval);
             }
         }
 
         function walking(count) {
-            if (count < 10) {
-                angleLeftArm -= 1;
-                angleRightArm += 1;
+            if (count < 20) {
+                angleLeftArm -= 2;
+                angleRightArm += 2;
                 angleLeftLeg += 1;
                 angleRightLeg -= 1;
             }
             else {
-                angleLeftArm += 1;
-                angleRightArm -= 1;
+                angleLeftArm += 2;
+                angleRightArm -= 2;
                 angleLeftLeg -= 1;
                 angleRightLeg += 1;
             }
